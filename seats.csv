@@ -1,6 +1,6 @@
 Seat,Employee,Department,Status,Top,Left,,,,,,,,Employee Names,,,Department,,,Status
 A1,Aashiq Roshan V S,GeoConnect,Occupied,36,45,,,,,,,,Aashiq Roshan V S,,,GeoConnect,,,Occupied
-A2,K V RAM,GeoConnect,Occupied,36,110,,,,,,,,Abhinand C U,,,GeoPerform,,,Available
+A2,Abhinand C U,GeoConnect,Occupied,36,110,,,,,,,,Abhinand C U,,,GeoPerform,,,Available
 A3,,GeoConnect,Available,36,175,,,,,,,,Abhirag EP,,,GeoStem,,,Reserved
 A4,,GeoConnect,Available,36,240,,,,,,,,Abilash A,,,HR,,,Under Maintenance
 A5,,GeoConnect,Available,36,305,,,,,,,,Adhithya VN,,,Intern,,,
@@ -82,4 +82,5 @@ O1,,External,Reserved,555,666,,,,,,,,,,,,,,
 O2,,External,Reserved,613,666,,,,,,,,,,,,,,
 O3,,External,Occupied,555,716,,,,,,,,,,,,,,
 O4,,External,Occupied,613,716,,,,,,,,,,,,,,
+
 
