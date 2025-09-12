@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <title>ProdEngine - Seating Layout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="images/logo.svg" alt="Company Logo">
+    </div>
+  </header>
+  <h2>Seating Layout</h2>
+
+  <!-- Legend -->
+  <div class="legend">
+    <span class="dept-geoconnect">GeoConnect</span>
+    <span class="dept-geoperform">GeoPerform</span>
+    <span class="dept-geostem">GeoStem</span>
+    <span class="dept-hr">HR</span>
+    <span class="dept-intern">Intern</span>
+    <span class="dept-external">External</span>
+    <span style="background:#fff; border:1px solid #999;">No Dept</span>
+  </div>
+
+  <!-- Error display -->
+  <div id="error" style="color: red;"></div>
+
+  <!-- Seating area -->
+  <div class="layout" id="layout"></div>
+
+  <script>
+    const csvUrl = "seats.csv";  // must be in same folder
+
+    fetch(csvUrl)
+      .then(response => {
+        if (!response.ok) throw new Error("HTTP error " + response.status);
+        return response.text();
+      })
+      .then(data => {
+        const rows = data.trim().split("\n").map(r => r.split(","));
+        rows.shift(); // remove header row
+
+        const layoutDiv = document.getElementById("layout");
+        // Department mapping (Full name → Short code)
+        const deptMap = {
+          "human resources": "hr",
+          "geoconnect": "geoconnect",
+          "geoperform": "geoperform",
+          "geostem": "geostem",
+          "hr": "hr", 
+          "intern": "intern",
+          "external": "external",
+          "": "nodept",
+          "no dept": "nodept"
+        };
+
+        rows.forEach(row => {
+          let [seatNo, employee, dept, status, top, left] = row;
+
+          // Normalize
+          dept = (dept || "").trim().toLowerCase();
+          status = (status || "").trim().toLowerCase() || "Available";
+
+          // Map to short class
+          const deptClass = "dept-" + (deptMap[dept] || "nodept");
+
+          let div = document.createElement("div");
+          div.className = `seat ${status} ${deptClass}`;
+
+          // Show only seat number inside
+          div.textContent = seatNo;
+
+          // Tooltip logic
+          let tooltip = "";
+          if (status === "occupied" || status === "reserved") {
+            tooltip = `${employee || "Unassigned"} | ${dept || "No Dept"} | ${status}`;
+          } else {
+            tooltip = status;
+          }
+
+          div.setAttribute("data-tooltip", tooltip);
+
+          div.style.top = top.trim() + "px";
+          div.style.left = left.trim() + "px";
+
+          layoutDiv.appendChild(div);
+        });
+      })
+      .catch(err => {
+        document.getElementById("error").textContent = "Error loading seating CSV: " + err.message;
+      });
+  </script>
+</body>
+
+</html>

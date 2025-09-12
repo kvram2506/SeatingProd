@@ -1,0 +1,137 @@
+body {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 50px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f5f5;
+}
+
+/* Fixed header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Logo */
+.site-header .logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 0px;
+}
+
+.layout {
+  position: relative;
+  width: 1287px;
+  height: 642px;
+  background: url('../images/office-layout.png') no-repeat center center;
+  background-size: cover;
+  border: 1px solid #ccc;
+}
+
+.seat {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 2px;
+  background: #eee;
+  /* blank if no dept */
+  border: 1px solid #999;
+  /* subtle border */
+}
+
+.dept-geoconnect {
+  background: #78080f ;
+  color: white;
+}
+
+.dept-geoperform {
+  background: #f37421 ;
+  color: white;
+}
+
+.dept-geostem {
+  background: #b7cc17 ;
+  color: white;
+}
+
+.dept-hr {
+  background: #9b59b6 ;
+  color: white;
+}
+
+.dept-intern {
+  background: #e977e6 ;
+  color: white;
+}
+
+.dept-external {
+  background: #263d63 ;
+  color: white;
+}
+
+.dept-nodept {
+  background: #eee;
+  color: #999;
+}
+
+/* Tooltip */
+.seat[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  text-align: left;
+  z-index: 20;
+}
+
+.seat:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.legend{
+  margin: 20px 0;
+}
+
+.legend span {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 5px 10px 5px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
