@@ -1,17 +1,17 @@
 Seat,Employee,Department,Status,Top,Left
-A1,Aashiq Roshan V S,GeoConnect,Occupied,36,45
-A2,Vacant1,GeoConnect,Available,36,110
-A3,Vacant2,GeoConnect,Available,36,175
-A4,Vacant3,GeoConnect,Available,36,240
-A5,Vacant4,GeoConnect,Available,36,305
-B1,Vacant5,GeoConnect,Available,122,110
-B2,Emp2,GeoConnect,Occupied,122,175
-B3,Emp3,GeoConnect,Occupied,122,240
-B4,Emp4,GeoConnect,Occupied,122,305
-B5,Abhinand C U,GeoConnect,Occupied,150,110
-B6,,GeoConnect,Occupied,150,175
-B7,,GeoConnect,Occupied,150,240
-B8,,GeoConnect,Occupied,150,305
+A1,Aashiq Roshan V S,GeoPerform,Occupied,36,45
+A2,Vacant1,GeoPerform,Available,36,110
+A3,Vacant2,GeoPerform,Available,36,175
+A4,Vacant3,GeoPerform,Available,36,240
+A5,Vacant4,GeoPerform,Available,36,305
+B1,Vacant5,GeoPerform,Available,122,110
+B2,Emp2,GeoPerform,Occupied,122,175
+B3,Emp3,GeoPerform,Occupied,122,240
+B4,Emp4,GeoPerform,Occupied,122,305
+B5,Abhinand C U,GeoPerform,Occupied,150,110
+B6,,GeoPerform,Occupied,150,175
+B7,,GeoPerform,Occupied,150,240
+B8,,GeoPerform,Occupied,150,305
 C1,,GeoPerform,Occupied,241,110
 C2,,GeoPerform,Occupied,241,175
 C3,,GeoPerform,Occupied,241,240
@@ -20,10 +20,10 @@ C5,,GeoPerform,Occupied,269,110
 C6,,GeoPerform,Occupied,269,175
 C7,,GeoPerform,Occupied,269,240
 C8,,GeoPerform,Occupied,269,305
-D1,Ajay B Nair,Human Resources,Occupied,360,110
-D2,,Human Resources,Occupied,360,175
-D3,,Human Resources,Occupied,360,240
-D4,,Human Resources,Occupied,360,305
+D1,Ajay B Nair,GeoPerform,Occupied,360,110
+D2,,GeoPerform,Occupied,360,175
+D3,,GeoPerform,Occupied,360,240
+D4,,GeoPerform,Occupied,360,305
 D5,,Human Resources,Occupied,387,110
 D6,,Human Resources,Occupied,387,175
 D7,,Human Resources,Occupied,387,240
@@ -40,28 +40,28 @@ F3,Abhirag EP,GeoConnect,Occupied,272,576
 F4,,GeoConnect,Occupied,146,603
 F5,,GeoConnect,Occupied,210,603
 F6,,GeoConnect,Occupied,272,603
-G1,,GeoPerform,Occupied,146,702
-G2,,GeoPerform,Occupied,210,702
-G3,,GeoPerform,Occupied,272,702
-G4,,GeoPerform,Occupied,146,730
-G5,,GeoPerform,Occupied,210,730
-G6,,GeoPerform,Occupied,272,730
-H1,,,Available,146,829
-H2,,,Available,210,829
-H3,,,Available,272,829
-H4,,,Available,146,857
-H5,,,Available,210,857
-H6,,,Available,272,857
-I1,,,Available,146,957
-I2,,,Available,210,957
-I3,,,Available,272,957
-I4,,,Available,146,984
-I5,,,Available,210,984
-I6,,,Available,272,984
-J1,Arjun K Sureshbabu,GeoStem,Occupied,390,957
-J2,,GeoStem,Occupied,454,957
-J3,,GeoStem,Occupied,390,984
-J4,,GeoStem,Occupied,454,984
+G1,,GeoStem,Occupied,146,702
+G2,,GeoStem,Occupied,210,702
+G3,,GeoStem,Occupied,272,702
+G4,,GeoStem,Occupied,146,730
+G5,,GeoStem,Occupied,210,730
+G6,,GeoStem,Occupied,272,730
+H1,,GeoStem,Available,146,829
+H2,,GeoStem,Available,210,829
+H3,,GeoStem,Available,272,829
+H4,,GeoStem,Available,146,857
+H5,,GeoStem,Available,210,857
+H6,,GeoStem,Available,272,857
+I1,,Focali,Available,146,957
+I2,,Focali,Available,210,957
+I3,,Focali,Available,272,957
+I4,,Focali,Available,146,984
+I5,,Focali,Available,210,984
+I6,,Focali,Available,272,984
+J1,Arjun K Sureshbabu,Focali,Occupied,390,957
+J2,,Focali,Occupied,454,957
+J3,,Focali,Occupied,390,984
+J4,,Focali,Occupied,454,984
 K1,,GeoStem,Occupied,390,829
 K2,,GeoStem,Occupied,454,829
 K3,,GeoStem,Occupied,390,857
